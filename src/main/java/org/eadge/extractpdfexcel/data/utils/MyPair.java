@@ -1,12 +1,10 @@
 package org.eadge.extractpdfexcel.data.utils;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 /**
  * Created by eadgyo on 19/07/16.
  *
  */
-public class MyPair<L, R> extends Pair
+public class MyPair<L, R>
 {
     private L l;
     private R r;
@@ -17,7 +15,6 @@ public class MyPair<L, R> extends Pair
         this.r = r;
     }
 
-    @Override
     public L getLeft()
     {
         return l;
@@ -28,7 +25,6 @@ public class MyPair<L, R> extends Pair
         this.l = l;
     }
 
-    @Override
     public R getRight()
     {
         return r;
@@ -39,13 +35,11 @@ public class MyPair<L, R> extends Pair
         this.r = r;
     }
 
-    @Override
     public int compareTo(Object o)
     {
         return 0;
     }
 
-    @Override
     public Object setValue(Object o)
     {
         return null;

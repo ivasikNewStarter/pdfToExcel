@@ -80,8 +80,8 @@ public class My2DArray<T>
     public void insertColumn(int insertIndex, ArrayList<T> column)
     {
         // Extend array limits if inserted line exceeds them
-        fillColumn(insertIndex - 1);
-        fillLine(column.size());
+        fillColumn(insertIndex);
+        fillLine(column.size() + 1);
 
         // Fill the rest of the line if the line is under limit of the array
         fillNullRestOfLane(numberOfLines(), column);
@@ -164,7 +164,7 @@ public class My2DArray<T>
         for (int i = 0; i < line.size(); i++)
         {
             T t = line.get(i);
-            columns.get(i).add(insertIndex, t);
+            columns.get(i).add(insertIndex - 1, t);
         }
     }
 
@@ -173,7 +173,7 @@ public class My2DArray<T>
      */
     public void addLine()
     {
-        insertLine(numberOfLines());
+        insertLine(numberOfLines() + 1);
     }
 
     /**
