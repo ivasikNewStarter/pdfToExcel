@@ -2,13 +2,17 @@
 Based on https://github.com/eadgyo/Extract-PDF-Excel
 Convert pdf to excel. Only the text will be extracted.
 
-## 1) Usage
+## 1) Usage - io.github.perplexhub.pdf2excel.Pdf2Excel
 
-InputStream pdfFileInputStream = ......;
-ByteArrayOutputStream excelFileByteArrayOutputStream out = io.github.perplexhub.pdf2excel.Pdf2Excel.convert(pdfFileInputStream);
+String pdfPassword = <......>;<br>
+InputStream pdfInputStream = <......>;<br>
+ByteArrayOutputStream excelOutputStream ;<br>
 
-String password = ......;
-ByteArrayOutputStream excelFileByteArrayOutputStream out = io.github.perplexhub.pdf2excel.Pdf2Excel.convert(pdfFileInputStream, password);
+// Convert PDF without password protected<br>
+excelOutputStream = Pdf2Excel.convert(pdfInputStream);
+
+// Convert PDF with password protected<br>
+excelOutputStream = Pdf2Excel.convert(pdfInputStream, pdfPassword);
 
 ## 2) Maven
 
